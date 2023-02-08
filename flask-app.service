@@ -1,0 +1,17 @@
+[Unit]
+Description=Flask app service
+After=network.target
+
+[Service]
+WorkingDirectory=/home/ivasiluk/app
+ExecStart=/home/ivasiluk/app/venv/bin/pithon -m gunicorn -b 0.0.0.0:25000 -w 4
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+
+
+
+
